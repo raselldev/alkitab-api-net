@@ -20,6 +20,12 @@ namespace AlkitabAPI.Controllers
         public async Task<IActionResult> GetPassage(string pass)
         {
             var passage = await _passage.Passage(pass);
+
+            if (passage is null)
+            {
+                return NotFound();
+            }
+
             return Ok(passage);
         }
     }
