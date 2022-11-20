@@ -1,4 +1,5 @@
 
+
 # AlkitabAPI
 
 
@@ -10,7 +11,12 @@ sabda.org adalah sebuah Yayasan Kristen non-profit dan non-komersial yang berger
 [![CodeFactor](https://www.codefactor.io/repository/github/raselldev/alkitabapi/badge)](https://www.codefactor.io/repository/github/raselldev/alkitabapi) ![GitHub branch checks state](https://img.shields.io/github/checks-status/raselldev/AlkitabAPI/main) ![GitHub last commit](https://img.shields.io/github/last-commit/raselldev/AlkitabAPI)
 
 ## Documentation
-Soon.
+| URL | Method | Param|
+|--|--|--|
+|api/book  | GET |-|
+|api/passage  | GET |abbr(string), number(int)|
+
+
 
 ## License
 
