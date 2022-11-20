@@ -12,7 +12,6 @@ namespace AlkitabAPI.Services
 		{
             _httpClient = httpClientFactory.CreateClient();
         }
-
         public async Task<Bible> GetPassage(string abrr, int number)
         {
             string passage = abrr + "+" + number.ToString();
@@ -31,7 +30,6 @@ namespace AlkitabAPI.Services
                 StreamReader reader = new StreamReader(path);
                 model = (Bible)serializer.Deserialize(reader);
                 reader.Close();
-
             }
             else
             {
@@ -47,7 +45,6 @@ namespace AlkitabAPI.Services
             return model;
 
         }
-
         public Task<IEnumerable<Bible>> GetPassages()
         {
             throw new NotImplementedException();

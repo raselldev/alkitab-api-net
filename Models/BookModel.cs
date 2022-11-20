@@ -8,7 +8,6 @@ namespace AlkitabAPI.Models
         [JsonPropertyName("book")]
         public List<Book> book { get; set; }
     }
-
     public class Book
     {
         [JsonPropertyName("number")]
@@ -23,7 +22,6 @@ namespace AlkitabAPI.Models
         [JsonPropertyName("chapter")]
         public int chapter { get; set; }
     }
-
     public class Abbr
     {
         [JsonPropertyName("id")]
@@ -32,7 +30,6 @@ namespace AlkitabAPI.Models
         [JsonPropertyName("en")]
         public string en { get; set; }
     }
-
     public class Name
     {
         [JsonPropertyName("id")]
