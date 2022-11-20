@@ -1,32 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Controllers\" />
-    <None Remove="Helper\" />
-    <None Remove="Service\" />
-    <None Remove="External\" />
-    <None Remove="External\Contracts\" />
-    <None Remove="System.Xml.XmlSerializer" />
-    <None Remove="Newtonsoft.Json" />
     <None Remove="Models\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Services\" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Helper\" />
-    <Folder Include="Service\" />
-    <Folder Include="External\" />
-    <Folder Include="External\Contracts\" />
     <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>
