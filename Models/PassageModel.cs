@@ -7,13 +7,11 @@ namespace AlkitabAPI.Models
 {
 	public class PassageModel
 	{
-
 	}
 
     [XmlRoot(ElementName = "bible", Namespace = "")]
     public class Bible
     {
-
         [XmlElement(ElementName = "title")]
         public string Title { get; set; }
 
@@ -32,8 +30,6 @@ namespace AlkitabAPI.Models
         [XmlElement(ElementName = "title")]
         public string Title { get; set; }
 
-        //public bool cSpecified { get { return this.c != null; } }
-
         [XmlElement(ElementName = "chapter")]
         public Chapter Chapter { get; set; }
 
@@ -47,7 +43,6 @@ namespace AlkitabAPI.Models
     [XmlRoot(ElementName = "chapter", Namespace = "")]
     public class Chapter
     {
-
         [XmlElement(ElementName = "chap")]
         public int Chap { get; set; }
 
@@ -58,7 +53,6 @@ namespace AlkitabAPI.Models
     [XmlRoot(ElementName = "verses", Namespace = "")]
     public class Verses
     {
-
         [XmlElement(ElementName = "verse")]
         public List<Verse> Verse { get; set; }
     }

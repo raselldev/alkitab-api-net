@@ -26,15 +26,3 @@ namespace AlkitabAPI.Controllers
 		}
 	}
 }
-
-
-
-//var serilaizeJson = JsonConvert.SerializeObject(anonymousObj, Formatting.None,
-//new JsonSerializerSettings
-//{
-//    NullValueHandling = NullValueHandling.Ignore
-//});
-
-//var result = JsonConvert.DeserializeObject<dynamic>(serilaizeJson);
-
-////Output  
