@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient();
 
-//implement interface
+//implement interface 261122
 builder.Services.AddSingleton<IBookService, BookService>();
 builder.Services.AddSingleton<IPassageService, PassageService>();
 
