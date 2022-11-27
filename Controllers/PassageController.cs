@@ -18,10 +18,9 @@ namespace AlkitabAPI.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> GetPassageAsync(string abbr, int number)
+		public IActionResult GetPassageAsync(string abbr, int number)
 		{
-			var result = await _passageService.GetPassage(abbr, number);
-			var serializeJson = JsonSerializer.Serialize(result);
+			var result =  _passageService.GetPassage(abbr, number);
 			return Ok(result);
 		}
 	}

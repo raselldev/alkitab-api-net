@@ -1,4 +1,6 @@
-﻿using AlkitabAPI.Services;
+﻿using System.Threading.RateLimiting;
+using AlkitabAPI.Services;
+using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,18 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddHttpClient();
 
-//implement interface
+
+//add rate limit
+builder.Services.AddRateLimiter(_ =>
+_.AddFixedWindowLimiter(policyName:"fixed", options =>
+{
+    options.PermitLimit = 4;
+    options.Window = TimeSpan.FromSeconds(10);
+    options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+    options.QueueLimit = 5;
+}));
+
+//implement interface 261122
 builder.Services.AddSingleton<IBookService, BookService>();
 builder.Services.AddSingleton<IPassageService, PassageService>();
 
@@ -23,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
+app.UseRateLimiter();
 
 app.MapControllers();
 

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  alkitabapi:
+    image: ${DOCKER_REGISTRY-}alkitabapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile

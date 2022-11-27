@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlkitabAPI", "AlkitabAPI.csproj", "{5D7BCC23-5490-4FD7-B3DB-E9AA4FEB77EC}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1602D61D-6547-49CF-B4CB-575FDAFFCD25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5D7BCC23-5490-4FD7-B3DB-E9AA4FEB77EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D7BCC23-5490-4FD7-B3DB-E9AA4FEB77EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D7BCC23-5490-4FD7-B3DB-E9AA4FEB77EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1602D61D-6547-49CF-B4CB-575FDAFFCD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1602D61D-6547-49CF-B4CB-575FDAFFCD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1602D61D-6547-49CF-B4CB-575FDAFFCD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1602D61D-6547-49CF-B4CB-575FDAFFCD25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
