@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using AlkitabAPI.Services;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace AlkitabAPI.Controllers
 {
@@ -16,7 +17,8 @@ namespace AlkitabAPI.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult GetBook()
+        [EnableRateLimiting("fixed")]
+        public IActionResult GetBook()
 		{
 			var result = _bookService.GetBooks();
 			return Ok(result);

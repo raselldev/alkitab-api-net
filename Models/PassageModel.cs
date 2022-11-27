@@ -13,10 +13,10 @@ namespace AlkitabAPI.Models
     public class Bible
     {
         [XmlElement(ElementName = "title")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [XmlElement(ElementName = "book")]
-        public BookName Book { get; set; }
+        public BookName? Book { get; set; }
     }
 
     [XmlRoot(ElementName = "book", Namespace = "")]
@@ -25,19 +25,19 @@ namespace AlkitabAPI.Models
 
         [XmlElement(ElementName = "book_id")]
         [JsonPropertyName("book_id")]
-        public int BookId { get; set; }
+        public  int BookId { get; set; }
 
         [XmlElement(ElementName = "title")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [XmlElement(ElementName = "chapter")]
-        public Chapter Chapter { get; set; }
+        public Chapter? Chapter { get; set; }
 
         [XmlAttribute(AttributeName = "name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [XmlText]
-        public string Text { get; set; }
+        public string? Text { get; set; }
     }
 
     [XmlRoot(ElementName = "chapter", Namespace = "")]
@@ -47,14 +47,14 @@ namespace AlkitabAPI.Models
         public int Chap { get; set; }
 
         [XmlElement(ElementName = "verses")]
-        public Verses Verses { get; set; }
+        public required Verses Verses { get; set; }
     }
 
     [XmlRoot(ElementName = "verses", Namespace = "")]
     public class Verses
     {
         [XmlElement(ElementName = "verse")]
-        public List<Verse> Verse { get; set; }
+        public required List<Verse> Verse { get; set; }
     }
 
     [XmlRoot(ElementName = "verse", Namespace = "")]
@@ -65,10 +65,10 @@ namespace AlkitabAPI.Models
         public int Number { get; set; }
 
         [XmlElement(ElementName = "title")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [XmlElement(ElementName = "text")]
-        public string Text { get; set; }
+        public string? Text { get; set; }
     }
 
 }

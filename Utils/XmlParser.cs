@@ -12,11 +12,13 @@ namespace AlkitabAPI.Utils
 		public static string DownloadXML(string url)
 		{
 			string text;
-			using (var client =  new WebClient())
+#pragma warning disable SYSLIB0014 // Type or member is obsolete
+            using (var client = new WebClient())
 			{
 				text = client.DownloadString(url);
 			}
-			return text;
+#pragma warning restore SYSLIB0014 // Type or member is obsolete
+            return text;
 		}
 	}
 }

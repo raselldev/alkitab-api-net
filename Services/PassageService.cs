@@ -6,13 +6,13 @@ namespace AlkitabAPI.Services
 {
     public class PassageService: IPassageService
 	{
-        private readonly HttpClient _httpClient;
-        private Bible model = new Bible();
-		public PassageService(IHttpClientFactory httpClientFactory)
+        private Bible model = new();
+
+		public PassageService()
 		{
-            _httpClient = httpClientFactory.CreateClient();
         }
-        public async Task<Bible> GetPassage(string abrr, int number)
+
+        public Bible GetPassage(string abrr, int number)
         {
             string passage = abrr + "+" + number.ToString();
             string filename = passage + ".xml";
@@ -21,13 +21,14 @@ namespace AlkitabAPI.Services
             {
 
                 var data = XmlParser.DownloadXML(string.Format("http://alkitab.sabda.org/api/passage.php?passage={0}", passage));
-                File.WriteAllText("Data/"+filename, data);
+                File.WriteAllText("Data/" + filename, data);
 
-                string path = "Data/"+filename;
+                string path = "Data/" + filename;
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Bible), new XmlRootAttribute("bible"));
+                XmlSerializer serializer = new(typeof(Bible), new XmlRootAttribute("bible"));
 
-                StreamReader reader = new StreamReader(path);
+                StreamReader reader = new(path);
+
                 model = (Bible)serializer.Deserialize(reader);
                 reader.Close();
             }
@@ -35,9 +36,9 @@ namespace AlkitabAPI.Services
             {
                 string path = filename;
 
-                XmlSerializer serializer = new XmlSerializer(typeof(Bible), new XmlRootAttribute("bible"));
+                XmlSerializer serializer = new(typeof(Bible), new XmlRootAttribute("bible"));
 
-                StreamReader reader = new StreamReader(path);
+                StreamReader reader = new(path);
                 model = (Bible)serializer.Deserialize(reader);
                 reader.Close();
             }

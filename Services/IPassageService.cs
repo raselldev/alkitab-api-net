@@ -5,7 +5,7 @@ namespace AlkitabAPI.Services
 	public interface IPassageService
 	{
 		Task<IEnumerable<Bible>> GetPassages();
-		Task<Bible> GetPassage(string abrr, int number);
+		Bible GetPassage(string abrr, int number);
 	}
 }
 
