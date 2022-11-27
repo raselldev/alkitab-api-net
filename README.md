@@ -8,7 +8,8 @@ Alkitab adalah sebuah third-party backend Alkitab yang sumber bacaannya berasal 
 sabda.org adalah sebuah Yayasan Kristen non-profit dan non-komersial yang bergerak dalam bidang pelayanan media komputer dan Internet di Indonesia.
 
 ## Project Status
-[![CodeFactor](https://www.codefactor.io/repository/github/raselldev/alkitabapi/badge)](https://www.codefactor.io/repository/github/raselldev/alkitabapi) ![GitHub branch checks state](https://img.shields.io/github/checks-status/raselldev/AlkitabAPI/main) ![GitHub last commit](https://img.shields.io/github/last-commit/raselldev/AlkitabAPI)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/raselldev/AlkitabAPI/main) ![GitHub last commit](https://img.shields.io/github/last-commit/raselldev/AlkitabAPI)
+
 
 ## Documentation
 | URL | Method | Param|
