@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using AlkitabAPI.Models;
 using AlkitabAPI.Utils;
 using Microsoft.AspNetCore.Hosting.Server;
+using System.IO;
 
 namespace AlkitabAPI.Services
 {
