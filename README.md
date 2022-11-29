@@ -11,6 +11,11 @@ sabda.org adalah sebuah Yayasan Kristen non-profit dan non-komersial yang berger
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/raselldev/AlkitabAPI/main) ![GitHub last commit](https://img.shields.io/github/last-commit/raselldev/AlkitabAPI)
 
 
+## Sponsor
+https://saweria.co/rakarasell
+
+> 50% Dana yang masuk akan disumbangkan untuk keperluan di panti asuhan
+
 ## Documentation
 | URL | Method | Param|
 |--|--|--|
